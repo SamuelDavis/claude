@@ -22,13 +22,14 @@ Try to avoid anonymous functions in template views.
 Always prefer to declare event handlers outside of view templates.
 
 Prefer `function` definitions generally.
-use `const` inline function definitions for derived state.
+use `const get* =` inline function definitions for derived state.
 
 Generally, organize components as...
+
 ```ts
 // constants as const
 // local, private type definitions
-type Props = {}
+type Props = {};
 export default function ComponentName(props: Props) {
   // props handling
   // state definition
