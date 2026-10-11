@@ -31,7 +31,7 @@ Generally, organize components as...
   - derived state definition
   - stateful utility functions
   - event handlers
-  - return <tag {...parent} ...>
+  - return <tag ... {...parent}>
 - private, local stuff, e.g.
 - function AbstractedPrivateSubComponent, e.g. a complicated list item
 - stateless utility functions
