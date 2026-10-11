@@ -11,18 +11,17 @@ Always format all projects with prettier, if available, e.g. `npx prettier --wri
 
 ## SolidJS
 
-In SolidJS projects, always destructure signals as `[getX, setX]`, e.g.
+In SolidJS projects, prefer `get*` prefixes on getters, e.g.
 
 ```ts
 const [getCount, setCount] = createSignal(0);
+const getDerivedCount = createMemo(() => getCount() + 1);
 ```
 
 Try to avoid anonymous functions in template views.
 `<Show>` and `<For>` are examples of times when inline, anonymous functions are acceptable.
 Always prefer to declare event handlers outside of view templates.
-
 Prefer `function` definitions generally.
-use `const get* =` inline function definitions for derived state.
 
 Generally, organize components as...
 
