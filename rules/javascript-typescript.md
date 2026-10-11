@@ -5,10 +5,6 @@ paths:
 
 # JavaScript/TypeScript
 
-## Prettier
-
-Always format all projects with prettier, if available, e.g. `npx prettier --write .`.
-
 ## SolidJS
 
 In SolidJS projects, prefer `get*` prefixes on getters, e.g.
