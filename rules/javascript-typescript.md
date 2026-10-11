@@ -7,7 +7,7 @@ paths:
 
 ## SolidJS
 
-In SolidJS projects, prefer `get*` prefixes on getters, e.g.
+In SolidJS projects, prefer `get*` prefixes on accessors generally, e.g.
 
 ```ts
 const [getCount, setCount] = createSignal(0);
@@ -21,19 +21,17 @@ Prefer `function` definitions generally.
 
 Generally, organize components as...
 
-```ts
-// constants as const
-// local, private type definitions
-type Props = {};
-export default function ComponentName(props: Props) {
-  // props handling
-  // state definition
-  // derived state definition
-  // stateful utility functions
-  // event handlers
-  // return js
-}
-// private, local stuff, e.g.
-// function AbstractedPrivateSubComponent, e.g. a complicated list item
-// stateless utility functions
-```
+- constants as const
+- local, private type definitions
+- export default component
+  - props handling
+    - mergeProps where necessary
+    - split props: [local, parent] = splitProps
+  - state definition
+  - derived state definition
+  - stateful utility functions
+  - event handlers
+  - return <tag {...parent} ...>
+- private, local stuff, e.g.
+- function AbstractedPrivateSubComponent, e.g. a complicated list item
+- stateless utility functions
