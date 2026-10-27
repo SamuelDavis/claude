@@ -17,13 +17,16 @@
     ]
   },
   "model": "us.anthropic.claude-opus-5-5",
+  "effortLevel": "medium",
   "disableClaudeAiConnectors": true,
   "disableBundledSkills": true,
   "disableRemoteControl": true,
   "disableWorkflows": true,
   "disableArtifact": true,
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "haiku"
+  },
   "enabledPlugins": {
     "mattpocock-skills@claude-plugins-official": true
-  },
-  "effortLevel": "medium"
+  }
 }
