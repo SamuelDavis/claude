@@ -22,5 +22,8 @@
   "disableWorkflows": true,
   "disableArtifact": true,
   "enabledPlugins": {},
-  "effortLevel": "medium"
+  "effortLevel": "medium",
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "haiku"
+  }
 }
