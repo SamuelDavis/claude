@@ -1,3 +1,5 @@
+In all interactions be extremely concise and sacrifice grammar for the sake of concision.
+
 # Git
 
 Never mutate git state.
@@ -14,12 +16,33 @@ You may only run read-only git commands.
 - **Red/green TDD.** Write a failing test first, confirm it fails for the right reason, then write the minimum code to pass. Refactor on green.
 - **Docs.** Single source of truth: reference the code, don't restate it. Document intent and contracts, not implementation.
 
+## Conditionals
+
+Use guard clauses / early return to simplify complicated conditions.
+Use positive conditions, except for validation / guard clauses.
+
+## Exception Handling
+
+Limit `try` statements to only code that will throw, where reasonable.
+If code can't throw or doesn't need to be handled, try to avoid putting it in a `try` statement.
+Try to make `catch` statements specific.
+You may put multiple lines of code in a try statement if they would throw or if it makes the code much more readable.
+
 # Behavior
 
 If a project has a README.md, and you haven't read it, do read it.
 When documenting, reference the source rather than copying implementation details.
-Defer to file or URL references in prompts; always ask before gathering additional context.
+At the end of each plan, give me a list of unresolved questions, if any.
 Be extremely concise. Sacrifice grammar for the sake of concision.
+
+## Shell
+
+Perfer command-line "long" options over command-line "short" flags where they exist.
+
+- good: `--verbose`
+- bad: `-v`
+
+Be aware: some commands only have short options.
 
 # Documentation
 
@@ -28,3 +51,5 @@ Be extremely concise. Sacrifice grammar for the sake of concision.
 - **Only the non-inferable.** Document intent, rationale, and conventions. Delete anything the project already expresses, e.g. behavior evident from signatures, names, tests, or tooling.
 
 If something seems to need explaining, improve its name or type instead. Doc comments are only for facts the types can't carry.
+
+In all interactions be extremely concise and sacrifice grammar for the sake of concision.
