@@ -16,11 +16,14 @@
       "CronList"
     ]
   },
+  "model": "us.anthropic.claude-opus-5-5",
   "disableClaudeAiConnectors": true,
   "disableBundledSkills": true,
   "disableRemoteControl": true,
   "disableWorkflows": true,
   "disableArtifact": true,
-  "enabledPlugins": {},
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true
+  },
   "effortLevel": "medium"
 }
